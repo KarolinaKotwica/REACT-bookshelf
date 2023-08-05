@@ -1,12 +1,29 @@
 {
   "books": [
     {
-      "title": "Harry Potter",
+      "title": "New title",
+      "genre": "New Genre",
+      "id": 1
+    },
+    {
+      "title": "Test",
+      "genre": "romance",
       "id": 2
     },
     {
-      "title": "test",
+      "title": "ciekawa ksiazka",
+      "genre": "ni wiem",
       "id": 3
+    },
+    {
+      "title": "test",
+      "genre": "nie wiem",
+      "id": 4
+    },
+    {
+      "title": "jakis tytul",
+      "genre": "",
+      "id": 5
     }
   ]
 }
