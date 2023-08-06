@@ -2,8 +2,9 @@ import { useState } from "react";
 import useBooksContext from './hooks/use-books-context';
 
 function BookEdit({book, onSubmit}) {
-    const [title, setTitle] = useState('')
-    const [genre, setGenre] = useState('')
+    const [title, setTitle] = useState(book.title)
+    const [genre, setGenre] = useState(book.genre)
+    const [pages, setPages] = useState(book.pages)
     const { editBookById } = useBooksContext();
 
     const handleChange = (e) => {
@@ -14,11 +15,15 @@ function BookEdit({book, onSubmit}) {
         setGenre(e.target.value);
     }
 
+    const handlePagesChange = (e) => {
+        setPages(e.target.value);
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         onSubmit()
-        editBookById(book.id, title, genre)
+        editBookById(book.id, title, genre, pages)
     }
 
     return (
@@ -35,6 +40,11 @@ function BookEdit({book, onSubmit}) {
                     placeholder="New genre"
                     value={genre}
                     onChange={handleGenreChange} />
+                <input className="input"
+                    type="number"
+                    placeholder="Number of pages.."
+                    value={pages}
+                    onChange={handlePagesChange} />
                 <button className="button is-primary" type="submit">Save</button>
             </form>
         </div>

@@ -1,14 +1,18 @@
 import { useState } from "react";
 import BookEdit from "./BookEdit";
+import PromptPopup from "./PromptPopup";
 import useBooksContext from './hooks/use-books-context';
 
 function BookShow({ book }) {
-    const [showEdit, setShowEdit] = useState(false)
-    const { deleteBookById } = useBooksContext();
-
+    const [showEdit, setShowEdit] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    // const { deleteBookById } = useBooksContext();
 
     const handleRemove = () => {
-        deleteBookById(book.id)
+        // deleteBookById(book.id)
+        setIsOpen(!isOpen)
+
+        console.log(isOpen)
     }
 
     const handleEdit = () => {
@@ -19,13 +23,19 @@ function BookShow({ book }) {
         setShowEdit(false)
     }
 
-    let content = <span><h3>{book.title}</h3><h5>{book.genre}</h5></span>
+    let content = <span><h3>{book.title}</h3><h5>{book.genre}</h5><h5>{book.pages} pages</h5></span>
     if (showEdit) {
         content = <BookEdit onSubmit={handleSubmit} book={book} />
     }
 
+    let popup = '';
+    if (isOpen) {
+        popup = <PromptPopup book={book} setIsOpen={setIsOpen} />
+    }
+
     return (
         <>
+            <span>{popup}</span>
             <div className="book-show bgColor1">
             <img src={`https://picsum.photos/seed/${book.id}/300/200`} alt="books" />
                 <div className="content">{content}</div>

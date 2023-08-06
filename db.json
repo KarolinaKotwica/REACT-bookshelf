@@ -3,11 +3,13 @@
     {
       "title": "New title",
       "genre": "New Genre",
+      "pages": "500",
       "id": 1
     },
     {
       "title": "Test",
       "genre": "romance",
+      "pages": "10001",
       "id": 2
     },
     {
@@ -21,9 +23,24 @@
       "id": 4
     },
     {
-      "title": "jakis tytul",
-      "genre": "",
-      "id": 5
+      "title": "jakis fajny tutul",
+      "genre": "romance, horror",
+      "id": 7
+    },
+    {
+      "title": "Następny tytul ciekawej ksiazki",
+      "genre": "nie wiem chyba thiller",
+      "pages": "500",
+      "id": 8
+    },
+    {
+      "title": "Test",
+      "genre": "romance, thiller, horror",
+      "pages": "1005",
+      "id": 9
     }
+  ],
+  "test": [
+    "ILoveReact!"
   ]
 }

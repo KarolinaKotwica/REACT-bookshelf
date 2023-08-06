@@ -4,6 +4,7 @@ import useBooksContext from './hooks/use-books-context';
 function BookCreate() {
     const [title, setTitle] = useState('')
     const [genre, setGenre] = useState('')
+    const [pages, setPages] = useState(0)
     const { createBook } = useBooksContext();
 
     const handleChange = (e) => {
@@ -14,14 +15,18 @@ function BookCreate() {
         setGenre(e.target.value);
     }
 
+    const handlePagesChange = (e) => {
+        setPages(e.target.value);
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        createBook(title, genre)
+        createBook(title, genre, pages)
 
         setGenre('')
         setTitle('')
-        
+        setPages('')
     }
 
     return (
@@ -37,8 +42,16 @@ function BookCreate() {
                 <input className="input bgColor1 color1"
                     type="text"
                     name="genre" 
+                    value={genre}
                     onChange={handleGenreChange}
                     placeholder="Genre.."
+                    />
+                <input className="input bgColor1 color1"
+                    type="number"
+                    name="pages" 
+                    // value={pages}
+                    onChange={handlePagesChange}
+                    placeholder="Number of pages.."
                     />
                 <button className="button">Add your book</button>
             </form>
