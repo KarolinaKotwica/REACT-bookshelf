@@ -1,9 +1,9 @@
 {
   "books": [
     {
-      "title": "New title",
-      "genre": "New Genre",
-      "pages": "500",
+      "title": "Nowy tytuł",
+      "genre": "drama",
+      "pages": "105",
       "id": 1
     },
     {
@@ -16,11 +16,6 @@
       "title": "ciekawa ksiazka",
       "genre": "ni wiem",
       "id": 3
-    },
-    {
-      "title": "test",
-      "genre": "nie wiem",
-      "id": 4
     },
     {
       "title": "jakis fajny tutul",
@@ -38,6 +33,13 @@
       "genre": "romance, thiller, horror",
       "pages": "1005",
       "id": 9
+    },
+    {
+      "author": "Diana Gabaldon",
+      "title": "Obca",
+      "genre": "romance, thiller",
+      "pages": "500",
+      "id": 10
     }
   ],
   "test": [

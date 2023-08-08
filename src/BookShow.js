@@ -23,7 +23,7 @@ function BookShow({ book }) {
         setShowEdit(false)
     }
 
-    let content = <span><h3>{book.title}</h3><h5>{book.genre}</h5><h5>{book.pages} pages</h5></span>
+    let content = <span><h3 className="color1">{book.title}</h3><h5>{book.author}</h5><h5>{book.genre}</h5><h5>{book.pages} pages</h5></span>
     if (showEdit) {
         content = <BookEdit onSubmit={handleSubmit} book={book} />
     }

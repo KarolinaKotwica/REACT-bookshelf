@@ -3,12 +3,17 @@ import useBooksContext from './hooks/use-books-context';
 
 function BookEdit({book, onSubmit}) {
     const [title, setTitle] = useState(book.title)
+    const [author, setAuthor] = useState('')
     const [genre, setGenre] = useState(book.genre)
     const [pages, setPages] = useState(book.pages)
     const { editBookById } = useBooksContext();
 
     const handleChange = (e) => {
         setTitle(e.target.value);
+    }
+
+    const handleAuthorChange = (e) => {
+        setAuthor(e.target.value);
     }
 
     const handleGenreChange = (e) => {
@@ -23,24 +28,29 @@ function BookEdit({book, onSubmit}) {
         e.preventDefault();
 
         onSubmit()
-        editBookById(book.id, title, genre, pages)
+        editBookById(book.id, author, title, genre, pages)
     }
 
     return (
         <div>
-            <div>{book.title}</div>
+            <div className="color1">{book.title}</div>
             <form className="book-edit" onSubmit={handleSubmit}>
-                <input className="input" 
+                <input className="input bgColor1" 
+                    type="text" 
+                    placeholder="New author" 
+                    value={author} 
+                    onChange={handleAuthorChange} />
+                <input className="input bgColor1" 
                     type="text" 
                     placeholder="New title" 
                     value={title} 
                     onChange={handleChange} />
-                <input className="input"
+                <input className="input bgColor1"
                     type="text"
                     placeholder="New genre"
                     value={genre}
                     onChange={handleGenreChange} />
-                <input className="input"
+                <input className="input bgColor1"
                     type="number"
                     placeholder="Number of pages.."
                     value={pages}

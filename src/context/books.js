@@ -12,14 +12,15 @@ function Provider({ children }) {
   }
 
 
-  const createBook = async (title, genre, pages) => {
+  const createBook = async (author, title, genre, pages) => {
     const response = await axios.post('http://localhost:3001/books', {
+      author,
       title,
       genre,
       pages
     })
 
-    console.log(response)
+    //console.log(response)
 
     const updateBooks = [
       ...books,
@@ -39,8 +40,9 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  const editBookById = async (id, newTitle, newGenre, newPages) => {
+  const editBookById = async (id, newAuthor, newTitle, newGenre, newPages) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
+      author: newAuthor,
       title: newTitle,
       genre: newGenre,
       pages: newPages
