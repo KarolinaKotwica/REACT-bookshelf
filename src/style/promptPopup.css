@@ -1,4 +1,4 @@
-/* .prompt-container {
+.prompt-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,4 +44,4 @@ input:focus {
     color: rgb(151, 30, 30);
     text-align: center;
     margin-top: 15px;
-} */
+}

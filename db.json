@@ -1,45 +1,28 @@
 {
   "books": [
     {
-      "title": "Nowy tytuł",
-      "genre": "drama",
-      "pages": "105",
-      "id": 1
-    },
-    {
-      "title": "Test",
-      "genre": "romance",
-      "pages": "10001",
-      "id": 2
-    },
-    {
-      "title": "ciekawa ksiazka",
-      "genre": "ni wiem",
-      "id": 3
-    },
-    {
-      "title": "jakis fajny tutul",
-      "genre": "romance, horror",
-      "id": 7
-    },
-    {
-      "title": "Następny tytul ciekawej ksiazki",
-      "genre": "nie wiem chyba thiller",
-      "pages": "500",
-      "id": 8
-    },
-    {
-      "title": "Test",
-      "genre": "romance, thiller, horror",
-      "pages": "1005",
-      "id": 9
+      "author": "Nieznany",
+      "title": "Testowy tytuł",
+      "genre": "romance, thiller",
+      "pages": "120",
+      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "id": 11
     },
     {
       "author": "Diana Gabaldon",
       "title": "Obca",
       "genre": "romance, thiller",
       "pages": "500",
-      "id": 10
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659086907i/10964.jpg",
+      "id": 12
+    },
+    {
+      "author": "Author nie wiem ale musi byc dlugie",
+      "title": "Nastepny tytul ciekawej ksiazki ",
+      "genre": "tez nie wiem ale robimy dlugi napis",
+      "pages": "4234424234234",
+      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "id": 13
     }
   ],
   "test": [

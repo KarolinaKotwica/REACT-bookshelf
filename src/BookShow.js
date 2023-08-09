@@ -37,8 +37,8 @@ function BookShow({ book }) {
         <>
             <span>{popup}</span>
             <div className="book-show bgColor1">
-            <img src={`https://picsum.photos/seed/${book.id}/300/200`} alt="books" />
-                <div className="content">{content}</div>
+            <img src={book.image} alt="books" />
+                <div className="content book-text">{content}</div>
                 <div className="actions">
                     <button className="edit" onClick={handleEdit}>Edit</button>
                     <button className="delete" onClick={handleRemove}>x</button>

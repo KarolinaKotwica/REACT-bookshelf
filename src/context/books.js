@@ -12,12 +12,13 @@ function Provider({ children }) {
   }
 
 
-  const createBook = async (author, title, genre, pages) => {
+  const createBook = async (author, title, genre, pages, image) => {
     const response = await axios.post('http://localhost:3001/books', {
       author,
       title,
       genre,
-      pages
+      pages,
+      image
     })
 
     //console.log(response)

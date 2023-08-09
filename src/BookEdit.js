@@ -3,7 +3,7 @@ import useBooksContext from './hooks/use-books-context';
 
 function BookEdit({book, onSubmit}) {
     const [title, setTitle] = useState(book.title)
-    const [author, setAuthor] = useState('')
+    const [author, setAuthor] = useState(book.author)
     const [genre, setGenre] = useState(book.genre)
     const [pages, setPages] = useState(book.pages)
     const { editBookById } = useBooksContext();
