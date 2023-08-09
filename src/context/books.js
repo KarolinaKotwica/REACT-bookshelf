@@ -41,16 +41,17 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  const editBookById = async (id, newAuthor, newTitle, newGenre, newPages) => {
+  const editBookById = async (id, newAuthor, newTitle, newGenre, newPages, newImage) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
       author: newAuthor,
       title: newTitle,
       genre: newGenre,
-      pages: newPages
+      pages: newPages,
+      image: newImage
     });
 
     const updatedBooks = books.map((book) => {
-      if (book.id === id) {
+      if (book.id == id) {
         return { ...book, ...response.data };
       }
 

@@ -30,16 +30,21 @@ function BookCreate() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (author != '' || genre != '' || title != '' || pages != 0) {
-            if (image == '') setImage('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
+        if (author == '' || genre == '' || title == '' || pages == 0 || pages <= 1) {
+            alert('Empty input'); 
+        } else {
+            
+            if (image == '') {
+                console.log('empty')
+                setImage('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
+            }
+            
             createBook(author, title, genre, pages, image)
 
             setAuthor('')
             setGenre('')
             setTitle('')
             setPages('')
-        } else {
-            alert('Empty input'); 
         }
 
     }
@@ -47,35 +52,36 @@ function BookCreate() {
     return (
         <div className="book-create-container">
         <div className="book-create">
-            <h1>Here is my favorite book list! if you have one too, please add it</h1>
+            <h1>Here is my favorite book list!<br /> if you have one too, please add it</h1>
+            <span>space = new line</span>
             <form className="form" onSubmit={handleSubmit}>
-                <input className="input bgColor1 color1" 
+                <input className="input bgColor1" 
                     type="text" 
                     name="title" 
                     onChange={handleChange} 
                     value={title} 
                     placeholder="Title.."/>
-                <input className="input bgColor1 color1" 
+                <input className="input bgColor1" 
                     type="text" 
                     name="author" 
                     onChange={handleAuthorChange} 
                     value={author} 
                     placeholder="Author.."/>
-                <input className="input bgColor1 color1"
+                <input className="input bgColor1"
                     type="text"
                     name="genre" 
                     value={genre}
                     onChange={handleGenreChange}
                     placeholder="Genre.."
                     />
-                <input className="input bgColor1 color1"
+                <input className="input bgColor1"
                     type="number"
                     name="pages" 
                     value={pages}
                     onChange={handlePagesChange}
                     placeholder="Number of pages.."
                     />
-                <input className="input bgColor1 color1"
+                <input className="input bgColor1"
                     type="url"
                     name="image" 
                     value={image}
@@ -85,15 +91,17 @@ function BookCreate() {
                 <button className="button">Add your book</button>
             </form>
         </div>
-        <div className="book-show new-book bgColor1 content">
-                <img src={image} />
-                <div className="new-book-container">
+        <div className="book-show bgColor1 content">
+                <img src={image} alt="book" />
+                <div className="book-text">
                     <h3>{title}</h3>
                     <h5>{author}</h5>
                     <h5>{genre}</h5>
-                    <h5>{pages} {pages != 0 ? 'pages' : ''}</h5>
+                    <h5>{pages} {pages != '' ? 'pages' : ''}</h5>
                 </div>
         </div>
+
+        
         </div>
     )
 }

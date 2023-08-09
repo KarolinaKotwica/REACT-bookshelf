@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useBooksContext from './hooks/use-books-context';
 import axios from 'axios';
 import './style/promptPopup.css';
@@ -11,7 +11,7 @@ const PromptPopup = ({book, setIsOpen}) => {
     const handleRemove =  async () => {
         const response = await axios.get('http://localhost:3001/test')
 
-        if (answer == response.data[0]) {
+        if (answer === response.data[0]) {
             deleteBookById(book.id)
         } else {
             setInfo("Wrong password!")
