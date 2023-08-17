@@ -13,6 +13,11 @@ function App() {
 
   return (
     <div className='app'>
+      <h1>Here is my favorite book list!<br /> If you have one too, please add it</h1>
+      <div className='tips'>
+        space = new line<br />
+        image = open image on google in new tab and copy link
+      </div>
       <BookCreate />
       <BookList />
     </div>

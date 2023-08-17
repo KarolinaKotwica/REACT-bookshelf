@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useBooksContext from './hooks/use-books-context';
 
 function BookCreate() {
@@ -34,26 +34,27 @@ function BookCreate() {
             alert('Empty input'); 
         } else {
             
-            if (image == '') {
-                console.log('empty')
-                setImage('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
-            }
-            
             createBook(author, title, genre, pages, image)
 
             setAuthor('')
             setGenre('')
             setTitle('')
             setPages('')
+            setImage('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
         }
 
     }
 
+    useEffect(() => {
+        if (image == '') {
+            console.log('empty')
+            setImage('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
+        }
+    }, [image])
+
     return (
         <div className="book-create-container">
         <div className="book-create">
-            <h1>Here is my favorite book list!<br /> if you have one too, please add it</h1>
-            <span>space = new line</span>
             <form className="form" onSubmit={handleSubmit}>
                 <input className="input bgColor1" 
                     type="text" 

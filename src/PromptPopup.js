@@ -8,7 +8,7 @@ const PromptPopup = ({book, setIsOpen}) => {
     const [info, setInfo] = useState('')
     const { deleteBookById } = useBooksContext();
 
-    const handleRemove =  async () => {
+    const handleRemove =  async (e) => {
         const response = await axios.get('http://localhost:3001/test')
 
         if (answer === response.data[0]) {
@@ -22,12 +22,18 @@ const PromptPopup = ({book, setIsOpen}) => {
         setAnswer(e.target.value)
     }
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleRemove();
+        }
+    };
+
     return (
         <>
             <div className="prompt-container">
                 <div className="prompt-content">
                     <p>You can delete only if you know the password!</p>
-                    <input type="password" onChange={handleChange} required/>
+                    <input type="password" onChange={handleChange} onKeyUp={handleKeyPress} autoFocus required/>
                     <div className='button-group'>
                         <button onClick={() => setIsOpen(false)}>Cancel</button>
                         <button onClick={handleRemove}>Remove</button>

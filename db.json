@@ -1,92 +1,52 @@
 {
   "books": [
     {
-      "author": "Nieznany",
-      "title": "Testowy tytuł",
-      "genre": "romance, thiller",
-      "pages": "125",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659086907i/10964.jpg",
-      "id": 11
-    },
-    {
       "author": "Diana Gabaldon",
-      "title": "Obca",
-      "genre": "romance, thiller",
-      "pages": "500",
+      "title": "Outlander",
+      "genre": "historical fiction, romance, mystery, adventure, science fiction/fantasy",
+      "pages": "850",
       "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659086907i/10964.jpg",
       "id": 12
     },
     {
-      "author": "Author nie wiem ale musi byc dlugie",
-      "title": "Nastepny tytul ciekawej ksiazki ",
-      "genre": "tez nie wiem ale robimy dlugi napis",
-      "pages": "4234424234234",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
-      "id": 13
+      "author": "Diana Gabaldon",
+      "title": "Dragonfly In Amber",
+      "genre": "historical fiction, romance, mystery, adventure, science fiction/fantasy",
+      "pages": "752",
+      "image": "https://images.thalia.media/00/-/d961e9c15dc5417b957d9f99ce7e5202/dragonfly-in-amber-taschenbuch-diana-gabaldon-englisch.jpeg",
+      "id": 14
     },
     {
-      "author": "Diana Gabaldon",
-      "title": "Obca 2",
-      "genre": "romance, thiller",
-      "pages": "465",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "author": "James Bowen",
+      "title": "A Street Cat Named Bob",
+      "genre": "Biography",
+      "pages": "320",
+      "image": "https://images.thalia.media/00/-/439af5dff38a4dd7aa8fb854061667a8/a-street-cat-named-bob-taschenbuch-james-bowen-englisch.jpeg",
       "id": 15
     },
     {
-      "author": "v vcc",
-      "title": "njjknkjnjnnnnknnjknknknnjnjnjn jnjbjkbkbb",
-      "genre": "gvvgv",
-      "pages": "6575",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "author": "Trudi Canavan",
+      "title": "The Magicians' Guild ",
+      "genre": "Fantasy",
+      "pages": "384",
+      "image": "https://images.thalia.media/00/-/14362a12edb6432c96887f0f09512f35/the-magician-s-guild-taschenbuch-trudi-canavan-englisch.jpeg",
       "id": 16
     },
     {
-      "author": "test",
-      "title": "test",
-      "genre": "test",
-      "pages": "100",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "author": "Trudi Canavan",
+      "title": "The Novice",
+      "genre": "Fantasy",
+      "pages": "480",
+      "image": "https://images.thalia.media/00/-/acd6a7b6ed8c4ec69258d4fab5485454/the-novice-taschenbuch-trudi-canavan-englisch.jpeg",
       "id": 17
     },
     {
-      "author": "ggf",
-      "title": "ftf",
-      "genre": "gf",
-      "pages": "4",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
+      "author": "Trudi Canavan",
+      "title": "The High Lord",
+      "genre": "Fantasy",
+      "pages": "531",
+      "image": "https://images.thalia.media/00/-/746b14468ff44ccdb4495c41587ef12c/the-high-lord-taschenbuch-trudi-canavan-englisch.jpeg",
       "id": 18
-    },
-    {
-      "author": "Diana Gabaldon",
-      "title": "Obca",
-      "genre": "romance, thiller",
-      "pages": "5",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
-      "id": 19
-    },
-    {
-      "author": "Diana Gabaldon",
-      "title": "Obca",
-      "genre": "romance, thiller",
-      "pages": "6",
-      "image": "",
-      "id": 20
-    },
-    {
-      "author": "Diana Gabaldon",
-      "title": "Obca",
-      "genre": "romance, thiller",
-      "pages": "789",
-      "image": "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
-      "id": 21
-    },
-    {
-      "author": "Diana Gabaldon",
-      "title": "Obca",
-      "genre": "romance, thiller",
-      "pages": "7",
-      "image": "",
-      "id": 22
     }
   ],
   "test": [

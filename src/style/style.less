@@ -16,6 +16,12 @@ body {
 
 .color1 { color: #429ef5;}
 
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
 .app {
     display: flex;
     justify-content: center;
@@ -25,6 +31,26 @@ body {
 img {
     width: 200px;
     height: 300px;
+}
+
+.tips {
+    text-align: center;
+    border: 1px solid #000;
+    padding: 12px;
+    margin: 18px auto;
+    width: 50%;
+
+    position: relative;
+
+    &::before {
+        content: 'TIPS';
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url('../images/background.png');
+        padding: 0 10px;
+    }
 }
 
 .new-book-container {
@@ -50,11 +76,6 @@ img {
         align-items: center;
         justify-content: center;
         -webkit-align-items: center;
-    }
-
-    h1 {
-        width: 80%;
-        text-align: center;
     }
 }
 
@@ -111,6 +132,12 @@ img {
     position: absolute;
     top: 5px;
     right: 25px;
+}
+
+.book-edit {
+    .input {
+        padding: 0;
+    }
 }
 
 .book-list {
@@ -216,15 +243,19 @@ img {
 
 .book-text {
     width: 100%;
-    margin: 2em 1em;
+    margin: 0 1em;
     overflow: hidden;
+    text-align: left;
 }
 
 .content h3 {
     font-size: 1.5em;
+    margin-top: 1em;
 }
 
 .content h5 {
-    font-size: 1em;
-    margin-bottom: 7px;
+    font-size: .9em;
+    margin: 15px 0;
 }
+
+// SMALL PHONES 

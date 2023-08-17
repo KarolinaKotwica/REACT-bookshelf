@@ -6,7 +6,7 @@ function BookEdit({book, onSubmit}) {
     const [author, setAuthor] = useState(book.author)
     const [genre, setGenre] = useState(book.genre)
     const [pages, setPages] = useState(book.pages)
-    const [image, setImage] = useState('https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60')
+    const [image, setImage] = useState(book.image)
     const { editBookById } = useBooksContext();
 
     const handleChange = (e) => {
@@ -25,6 +25,10 @@ function BookEdit({book, onSubmit}) {
         setPages(e.target.value);
     }
 
+    const handleImageChange = (e) => {
+        setImage(e.target.value)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -34,7 +38,7 @@ function BookEdit({book, onSubmit}) {
 
     return (
         <div>
-            <div className="color1">{book.title}</div>
+            <div className="color1">Edit book: {book.title}</div>
             <form className="book-edit" onSubmit={handleSubmit}>
                 <input className="input bgColor1" 
                     type="text" 
@@ -56,6 +60,11 @@ function BookEdit({book, onSubmit}) {
                     placeholder="Number of pages.."
                     value={pages}
                     onChange={handlePagesChange} />
+                <input className="input bgColor1"
+                    type="url"
+                    name="image" 
+                    value={image}
+                    onChange={handleImageChange} />
                 <button className="button is-primary" type="submit">Save</button>
             </form>
         </div>
