@@ -258,4 +258,120 @@ img {
     margin: 15px 0;
 }
 
-// SMALL PHONES 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1151px) {
+    .book-create-container {
+        margin: 1.8em 0;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+    .book-create-container {
+        flex-direction: column;
+        justify-content: center;
+
+        .book-create {
+            width: 90%;
+        }
+
+        .form {
+            width: 80%;
+        }
+
+        .book-show {
+            width: 93%;
+        }
+    }
+
+    .book-list {
+        flex-direction: column;
+
+        .book-show {
+            width: 90%;
+            margin: 10px auto;
+        }
+    }
+
+    .button {
+        margin: 2em auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .book-create-container {
+        flex-direction: column;
+        justify-content: center;
+
+        .book-create {
+            width: 90%;
+        }
+
+        .form {
+            width: 80%;
+        }
+
+        .book-show {
+            width: 90%;
+        }
+    }
+
+    .book-list {
+        flex-direction: column;
+
+        .book-show {
+            width: 90%;
+            margin: 10px auto;
+        }
+    }
+
+    .button {
+        margin: 2em auto;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .book-create-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 1.8em 0;
+
+        .book-create {
+            width: 100%;
+        }
+
+        .form {
+            width: 80%;
+        }
+    }
+
+    h1 {
+        margin: 1em auto;
+        width: 78%;
+        font-size: 1.7rem;
+    }
+
+    .tips {
+        width: 80%;
+    }
+
+    .book-list {
+        flex-direction: column;
+
+        .book-show {
+            width: 280px;
+            margin: 10px auto;
+            flex-direction: column;
+
+            img {
+                width: 280px;
+            }
+        }
+    }
+
+    .button {
+        margin: 2em auto;
+    }
+}
