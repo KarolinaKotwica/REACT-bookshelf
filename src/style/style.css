@@ -257,7 +257,7 @@ img {
     width: 80%;
   }
   .book-create-container .book-show {
-    width: 93%;
+    width: 90%;
   }
   .book-list {
     flex-direction: column;
@@ -267,7 +267,8 @@ img {
     margin: 10px auto;
   }
   .button {
-    margin: 2em auto;
+    margin: 1em auto;
+    padding: 4px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -293,7 +294,7 @@ img {
     margin: 10px auto;
   }
   .button {
-    margin: 2em auto;
+    margin: 0.5em auto;
   }
 }
 /* Extra small devices (phones, 600px and down) */
@@ -320,15 +321,25 @@ img {
   .book-list {
     flex-direction: column;
   }
-  .book-list .book-show {
+  .book-show {
     width: 280px;
     margin: 10px auto;
+    display: flex;
     flex-direction: column;
+    height: auto;
   }
-  .book-list .book-show img {
+  .book-show img {
     width: 280px;
   }
+  .content {
+    max-height: initial;
+  }
+  .book-text {
+    height: 300px;
+    width: 240px;
+    text-overflow: ellipsis;
+  }
   .button {
-    margin: 2em auto;
+    margin: 0.5em auto;
   }
 }

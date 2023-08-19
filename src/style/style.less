@@ -280,7 +280,7 @@ img {
         }
 
         .book-show {
-            width: 93%;
+            width: 90%;
         }
     }
 
@@ -294,7 +294,8 @@ img {
     }
 
     .button {
-        margin: 2em auto;
+        margin: 1em auto;
+        padding: 4px;
     }
 }
 
@@ -327,7 +328,7 @@ img {
     }
 
     .button {
-        margin: 2em auto;
+        margin: .5em auto;
     }
 }
 
@@ -359,19 +360,31 @@ img {
 
     .book-list {
         flex-direction: column;
+    }
 
-        .book-show {
+    .book-show {
+        width: 280px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        img {
             width: 280px;
-            margin: 10px auto;
-            flex-direction: column;
-
-            img {
-                width: 280px;
-            }
         }
     }
 
+    .content {
+        max-height: initial;
+    }
+
+    .book-text {
+        height: 300px;
+        width: 240px;
+        text-overflow: ellipsis;
+    }
+
     .button {
-        margin: 2em auto;
+        margin: .5em auto;
     }
 }
