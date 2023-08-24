@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useCallback } from "react";
+import { createContext, useState } from "react";
 import axios from 'axios';
 
 const BooksContext = createContext();
@@ -6,13 +6,14 @@ const BooksContext = createContext();
 function Provider({ children }) {
     const [books, setBooks] = useState([])
 
-    const fetchBooks = useCallback(async () => {
-    const response = await axios.get('http://localhost:9000/')
+    const fetchBooks = async () => {
+    const response = await axios.get('http://localhost:3001/books')
     setBooks(response.data)
-  }, [])
+  }
+
 
   const createBook = async (author, title, genre, pages, image) => {
-    const response = await axios.post('http://localhost:9000/', {
+    const response = await axios.post('http://localhost:3001/books', {
       author,
       title,
       genre,
@@ -20,6 +21,7 @@ function Provider({ children }) {
       image
     })
 
+    //console.log(response)
 
     const updateBooks = [
       ...books,
@@ -29,10 +31,8 @@ function Provider({ children }) {
     setBooks(updateBooks)
   }
 
-
-
   const deleteBookById = async (id) => {
-    await axios.delete(`http://localhost:9000/${id}`)
+    await axios.delete(`http://localhost:3001/books/${id}`)
 
     const updatedBooks = books.filter((book)=>{
       return book.id != id;
@@ -42,8 +42,7 @@ function Provider({ children }) {
   }
 
   const editBookById = async (id, newAuthor, newTitle, newGenre, newPages, newImage) => {
-    const response = await axios.put(`http://localhost:9000/${id}`, {
-      id: id,
+    const response = await axios.put(`http://localhost:3001/books/${id}`, {
       author: newAuthor,
       title: newTitle,
       genre: newGenre,
@@ -61,18 +60,6 @@ function Provider({ children }) {
 
     setBooks(updatedBooks);
   };
-
-  useEffect(() => {
-    fetchBooks()
-  }, [createBook])
-
-  useEffect(() => {
-    fetchBooks()
-  }, [deleteBookById])
-
-  useEffect(() => {
-    fetchBooks()
-  }, [editBookById])
 
   const valueToShare = {
     books,
