@@ -6,6 +6,9 @@ import BookContext, {Provider} from './context/books';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider>
-        <App />
-    </Provider>);
+    <React.StrictMode>
+        <Provider>
+            <App />
+        </Provider>
+    </React.StrictMode>
+    );
