@@ -6,6 +6,6 @@ import BookContext, {Provider} from './context/books';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BookContext.Provider>
+    <Provider>
         <App />
-    </BookContext.Provider>);
+    </Provider>);
